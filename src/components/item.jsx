@@ -1,4 +1,5 @@
-export default function Item({item}){
+
+function Item({item}){
     return (
         <li className="flex items-center gap-3">
             <input 
@@ -9,7 +10,9 @@ export default function Item({item}){
             <span className={item.packed ? "line-through" : ""}>
                 {item.quantity} {item.description}
             </span>
-            <button className="cursor-pointer bg-none border-none text-lg p-2 translate-y-0.5">❌</button>
+            <button className="cursor-pointer bg-none border-none text-2xl p-2 translate-y-0.5">❌</button>
         </li>
     ) 
 }
+
+export default Item;
