@@ -1,26 +1,21 @@
 import { useState } from "react";
 
-export default function Form(){
+export default function Form({onAddItems}){
     const [description,setDescription] = useState("");
     const [quantity, setQuantity] = useState(1);
-    const [items, setItems] = useState([]);
-
-    function handleAddItems(item){
-        setItems((items) => [...items, item]);
-    }
 
     function handleSubmit(e){
         e.preventDefault();
-        
+
         if(!description) return;
 
         const newItem = {description,quantity,packed: false,
         id: Date.now() };
         console.log(newItem);
         
-        handleAddItems(newItem);
+        onAddItems(newItem);
 
-        setDescription("");
+        setDescription(""); 
         setQuantity(1);
     }
 
