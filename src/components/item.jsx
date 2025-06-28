@@ -1,5 +1,5 @@
 
-function Item({item}){
+function Item({item, onDeleteItem}){
     return (
         <li className="flex items-center gap-3">
             <input 

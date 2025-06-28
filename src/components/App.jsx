@@ -22,7 +22,7 @@ function App() {
       <div className="grid grid-rows-[auto_auto_1fr_auto] h-screen">
       <Logo />
       <Form onAddItems= {handleAddItems} />
-      <PackingList items= {items} />
+      <PackingList items= {items} onDeleteItem={handleDeleteItem } />
       <Stats />
       </div>
     </>
