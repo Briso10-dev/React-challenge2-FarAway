@@ -10,7 +10,10 @@ function Item({item, onDeleteItem}){
             <span className={item.packed ? "line-through" : ""}>
                 {item.quantity} {item.description}
             </span>
-            <button className="cursor-pointer bg-none border-none text-2xl p-2 translate-y-0.5">❌</button>
+            <button 
+            className="cursor-pointer bg-none border-none text-2xl p-2 translate-y-0.5"
+            onClick={() => onDeleteItem(item.id)}
+            >❌</button>
         </li>
     ) 
 }
