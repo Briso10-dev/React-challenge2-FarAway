@@ -4,7 +4,8 @@ function Item({item, onDeleteItem}){
         <li className="flex items-center gap-3">
             <input 
                 type="checkbox" 
-                value={item.packed} 
+                value={item.packed}
+                onChange={()=> { } } 
                 className="h-5 w-5 accent-[#e5771f]"
             />
             <span className={item.packed ? "line-through" : ""}>
