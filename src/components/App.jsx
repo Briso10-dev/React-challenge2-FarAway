@@ -31,7 +31,7 @@ function App() {
       <div className="grid grid-rows-[auto_auto_1fr_auto] h-screen">
       <Logo />
       <Form onAddItems= {handleAddItems} />
-      <PackingList items= {items} onDeleteItem={handleDeleteItem } />
+      <PackingList items= {items} onDeleteItem={handleDeleteItem } onToggleItem={handleToggleItem} />
       <Stats />
       </div>
     </>

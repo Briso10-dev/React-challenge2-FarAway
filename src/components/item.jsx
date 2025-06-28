@@ -1,11 +1,11 @@
 
-function Item({item, onDeleteItem}){
+function Item({item, onDeleteItem, onToggleItem }){
     return (
         <li className="flex items-center gap-3">
             <input 
                 type="checkbox" 
                 value={item.packed}
-                onChange={()=> { } } 
+                onChange={()=> onToggleItem(item.id) } 
                 className="h-5 w-5 accent-[#e5771f]"
             />
             <span className={item.packed ? "line-through" : ""}>
