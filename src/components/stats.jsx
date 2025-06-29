@@ -6,7 +6,11 @@ export default function Stats({items}){
 
     return(
         <footer className="bg-[#76c7ad] text-center font-bold py-8 text-3xl">
-           <em>You have {numItems} items on your list, and you already packed {numPacked} ({percentage}%)</em>
+            <em>
+            {percentage === 100 ? 'You get everything ! Ready to go +' :
+             `You have ${numItems} items on your list, and you already packed ${numPacked} (${percentage}%)`
+            }
+          </em>
         </footer>
     )
 }
