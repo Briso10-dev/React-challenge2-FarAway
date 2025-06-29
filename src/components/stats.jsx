@@ -1,4 +1,13 @@
 export default function Stats({items}){
+    if (!items.length)
+        return (
+            <p className="bg-[#76c7ad] text-center font-bold py-8 text-3xl">
+                <em>
+                    Start adding items to your packing list  
+                </em>
+            </p>
+        );
+
 
    const numItems = items.length; //as sooon as the items are updated(from state) the component will re-render  
    const numPacked = items.filter((item) => item.packed).length
