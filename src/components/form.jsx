@@ -19,8 +19,8 @@ export default function Form({onAddItems}){
     }
 
     return(
-        <form onSubmit={handleSubmit} className="bg-[#e5771f] py-7 flex items-center justify-center gap-2 text-2xl">
-            <h3 className="mr-4 text-3xl">What do you need for your 😍 trip?</h3>
+        <form onSubmit={handleSubmit} className="bg-[#e5771f] py-7 flex items-center justify-center gap-2 text-2xl h-44">
+            <h3 className="mr-4 text-4xl">What do you need for your 😍 trip?</h3>
             <select 
                 value={quantity} 
                 onChange={(e)=> setQuantity(Number(e.target.value))}
