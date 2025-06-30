@@ -3,11 +3,16 @@ import Item from "./item";
 
 export default function PackingList({items,onDeleteItem,onToggleItem}){
     const [sortBy, setSortBy] = useState("input");
+    
+    let sortedItems;
+    
+    if(sortBy === 'input') sortedItems=items;
+
 
     return(
         <div className="bg-[#5a3e2b] text-[#ffebb3] py-20 flex flex-col justify-between items-center gap-8 text-2xl h-[59vh]">
             <ul className="list-none w-4/5 overflow-auto grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-3 justify-center content-start">
-                {items.map((item) => (
+                {sortedItems .map((item) => (
                     <Item item={item} 
                     onDeleteItem={onDeleteItem}
                     onToggleItem={onToggleItem} 
