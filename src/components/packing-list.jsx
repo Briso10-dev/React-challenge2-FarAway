@@ -11,6 +11,14 @@ export default function PackingList({items,onDeleteItem,onToggleItem}){
                     key={item.id}/>
                 ))}
             </ul>
+            <div>
+                <select className="uppercase px-6 py-3.5 text-[1.6rem] font-bold mx-2 text-black bg-[#ffebb3] rounded-2xl">
+                    <option value="input">Sort by input ordder</option>
+                    <option value="description">Sort by description</option>
+                    <option value="packed">Sort by packed status</option>
+                </select>
+
+            </div>
         </div>       
     )
 }
