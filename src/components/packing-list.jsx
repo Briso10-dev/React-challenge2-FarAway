@@ -8,6 +8,7 @@ export default function PackingList({items,onDeleteItem,onToggleItem}){
     
     if(sortBy === 'input') sortedItems=items;
 
+    if(sortBy == 'description') sortedItems = items.slice().sort((a,b) => a.description.localeCompare(b.description))
 
     return(
         <div className="bg-[#5a3e2b] text-[#ffebb3] py-20 flex flex-col justify-between items-center gap-8 text-2xl h-[59vh]">
