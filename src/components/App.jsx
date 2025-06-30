@@ -26,12 +26,16 @@ function App() {
         );
     }
 
+     function deleteAllItems(){
+          setItems([]);            
+    }
+
   return (
     <>
       <div className="grid grid-rows-[auto_auto_1fr_auto] h-screen">
       <Logo />
       <Form onAddItems= {handleAddItems} />
-      <PackingList items= {items} onDeleteItem={handleDeleteItem } onToggleItem={handleToggleItem} />
+      <PackingList items= {items} onDeleteItem={handleDeleteItem } onToggleItem={handleToggleItem} onDeleteAllItems = {deleteAllItems} />
       <Stats items={items} />
       </div>
     </>
